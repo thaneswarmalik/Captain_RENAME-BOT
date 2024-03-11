@@ -74,7 +74,7 @@ async def refunc(client, message):
 async def doc(bot, update):    
     new_name = update.message.text
     new_filename = new_name.split(":-")[1]
-    file_path = f"downloads/{new_filename}"
+    file_path = f"downloads/`{new_filename}`"
     file = update.message.reply_to_message
 
     ms = await update.message.edit("Tʀyɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅɪɴɢ....")    
@@ -102,7 +102,7 @@ async def doc(bot, update):
          except Exception as e:
              return await ms.edit(text=f"Yᴏᴜʀ Cᴀᴩᴛɪᴏɴ Eʀʀᴏʀ Exᴄᴇᴩᴛ Kᴇyᴡᴏʀᴅ Aʀɢᴜᴍᴇɴᴛ ●> ({e})")             
     else:
-         caption = f"**{new_filename}**"
+         caption = f"**`{new_filename}`**"
  
     if (media.thumbs or c_thumb):
          if c_thumb:
